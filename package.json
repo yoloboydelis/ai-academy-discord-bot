@@ -1,0 +1,17 @@
+{
+    "name": "ai-academy-discord-bot",
+    "version": "1.0.0",
+    "description": "Persistent Discord bot for the AI Improvement Academy — onboarding, placement quiz, role-graduation, XP/streak tracking, and beginner-help resource suggestions.",
+    "main": "index.js",
+    "scripts": {
+          "start": "node index.js",
+          "deploy-commands": "node deploy-commands.js"
+    },
+    "dependencies": {
+          "discord.js": "^14.14.1",
+          "dotenv": "^16.4.5"
+    },
+    "engines": {
+          "node": ">=18.0.0"
+    }
+}
