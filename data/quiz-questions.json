@@ -1,0 +1,36 @@
+{
+    "questions": [
+          {
+                  "q": "What is an LLM most fundamentally?",
+                  "options": ["A search engine", "A statistical next-token predictor trained on text", "A database of facts", "A rule-based chatbot"],
+                  "correctIndex": 1
+          },
+          {
+                  "q": "What is a 'hallucination' in AI output?",
+                  "options": ["A model crashing", "A confident but factually wrong answer", "A slow response", "An image generation error"],
+                  "correctIndex": 1
+          },
+          {
+                  "q": "What does a system prompt do?",
+                  "options": ["Sets persistent instructions/behavior for the whole conversation", "Only affects the first message", "Changes the model's training data", "Is the same as a regular user message"],
+                  "correctIndex": 0
+          },
+          {
+                  "q": "What is few-shot prompting?",
+                  "options": ["Asking very short questions", "Giving the model a few examples of the desired input/output before the real task", "Using a cheaper model", "Running the prompt multiple times"],
+                  "correctIndex": 1
+          },
+          {
+                  "q": "Why use chain-of-thought prompting?",
+                  "options": ["To make responses shorter", "To encourage step-by-step reasoning before answering, improving accuracy on complex tasks", "To save credits", "To bypass safety filters"],
+                  "correctIndex": 1
+          }
+    ],
+    "scoring": {
+          "tiers": [
+                  { "minCorrect": 4, "assignLevel": "Lvl2" },
+                  { "minCorrect": 2, "assignLevel": "Lvl1" },
+                  { "minCorrect": 0, "assignLevel": "Lvl0" }
+          ]
+    }
+}
