@@ -1,0 +1,13 @@
+[
+    { "keywords": ["hallucinat", "wrong answer", "made up", "fake fact", "made something up"], "title": "Lesson 3: Spotting Hallucinations", "channel": "level-0-fundamentals" },
+    { "keywords": ["which model", "model family", "gpt vs claude", "claude vs gpt", "what model should"], "title": "Lesson 2: The Major Model Families", "channel": "level-0-fundamentals" },
+    { "keywords": ["what is an llm", "how does an llm work", "llm really", "how do these models work"], "title": "Lesson 1: What Is an LLM, Really?", "channel": "level-0-fundamentals" },
+    { "keywords": ["prompt structure", "how to prompt", "4-part prompt", "how do i write a good prompt"], "title": "Lesson 1: The 4-Part Prompt Structure", "channel": "level-1-prompting-basics" },
+    { "keywords": ["persona", "role prompt", "act as", "give it a role"], "title": "Lesson 2: Role & Persona Framing", "channel": "level-1-prompting-basics" },
+    { "keywords": ["output format", "json output", "formatting output", "make it output"], "title": "Lesson 3: Output Format Control", "channel": "level-1-prompting-basics" },
+    { "keywords": ["few-shot", "few shot example", "give examples"], "title": "Lesson 1: Few-Shot Examples", "channel": "level-2-advanced-prompting" },
+    { "keywords": ["chain of thought", "cot prompting", "step by step reasoning", "think step by step"], "title": "Lesson 2: Chain-of-Thought Prompting", "channel": "level-2-advanced-prompting" },
+    { "keywords": ["system prompt", "persistent instructions"], "title": "Lesson 3: System Prompts & Persistent Instructions", "channel": "level-2-advanced-prompting" },
+    { "keywords": ["which model to use", "model selection", "cheap model premium model", "expensive model"], "title": "Model selection cheat sheet", "channel": "model-selection-guide" },
+    { "keywords": ["save credits", "save tokens", "cost per output", "credit efficient", "running out of credits"], "title": "High-output-per-credit starter post", "channel": "high-output-per-credit" }
+]
