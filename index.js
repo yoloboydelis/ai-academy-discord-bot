@@ -6,14 +6,14 @@ require('dotenv').config();
 const { Client, GatewayIntentBits, Partials, Collection } = require('discord.js');
 
 const client = new Client({
-    intents: [
-          GatewayIntentBits.Guilds,
-          GatewayIntentBits.GuildMembers,          // required for guildMemberAdd (Onboarding)
-          GatewayIntentBits.GuildMessages,
-          GatewayIntentBits.MessageContent,        // required to read message text (Resource recommendation)
-          GatewayIntentBits.GuildMessageReactions  // required for messageReactionAdd (Role assignment)
-        ],
-    partials: [Partials.Message, Partials.Channel, Partials.Reaction, Partials.GuildMember]
+        intents: [
+                      GatewayIntentBits.Guilds,
+                      GatewayIntentBits.GuildMembers,
+                      GatewayIntentBits.GuildMessages,
+                      GatewayIntentBits.MessageContent,
+                      GatewayIntentBits.GuildMessageReactions
+                    ],
+        partials: [Partials.Message, Partials.Channel, Partials.Reaction, Partials.GuildMember]
 });
 
 client.commands = new Collection();
@@ -25,15 +25,17 @@ client.commands.set(placementQuizCommand.data.name, placementQuizCommand);
 const handleGuildMemberAdd = require('./events/guildMemberAdd');
 const handleMessageCreate = require('./events/messageCreate');
 const handleReactionAdd = require('./events/messageReactionAdd');
+const handlePathSelect = require('./events/pathSelect');
 const handleInteractionCreate = require('./events/interactionCreate');
 
 client.once('ready', () => {
-    console.log(`Logged in as ${client.user.tag}. Serving ${client.guilds.cache.size} guild(s).`);
+        console.log(`Logged in as ${client.user.tag}. Serving ${client.guilds.cache.size} guild(s).`);
 });
 
 client.on('guildMemberAdd', handleGuildMemberAdd);
 client.on('messageCreate', handleMessageCreate);
 client.on('messageReactionAdd', (reaction, user) => handleReactionAdd(reaction, user));
+client.on('messageReactionAdd', (reaction, user) => handlePathSelect(reaction, user));
 client.on('interactionCreate', (interaction) => handleInteractionCreate(interaction, client));
 
 client.on('error', (err) => console.error('[client error]', err));
